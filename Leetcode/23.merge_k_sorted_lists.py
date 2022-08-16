@@ -14,9 +14,8 @@ class Solution:
 
         for l in lists:
             if l:
-                # put id(l) here as an unique indentifier as l.val can have dups
+                # put id(l) here as an unique identifier as l.val can have dups
                 heappush(heap, (l.val, id(l), l))
-
 
         dummy = ListNode()
         ptr = dummy
