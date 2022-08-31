@@ -12,7 +12,7 @@ class LRUCache:
     @param: capacity: An integer
     """
     def __init__(self, capacity):
-        # do intialization if necessary
+        # do initialization if necessary
         self.cap = capacity
         self.cache = {}
         self.cache_size = 0
