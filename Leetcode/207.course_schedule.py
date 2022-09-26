@@ -20,6 +20,10 @@ class Solution:
 
         q = deque([])
 
+        # course schedule II
+        ans = []
+        #
+
         for c in range(numCourses):
             if prep_count[c] != 0:
                 continue
@@ -28,6 +32,9 @@ class Solution:
         while q:
             c = q.popleft()
             course_taken.add(c)
+            # course schedule II
+            ans.append(c)
+            #
 
             for sub in course_tree[c]:
                 prep_count[sub] -= 1
@@ -35,3 +42,8 @@ class Solution:
                     q.append(sub)
 
         return True if len(course_taken) == numCourses else False
+
+
+        # course schedule II
+        return ans if len(course_taken) == numCourses else []
+        #
